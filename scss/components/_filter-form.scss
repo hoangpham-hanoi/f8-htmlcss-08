@@ -148,6 +148,10 @@
         color: #9e9da8;
         font-weight: 400;
       }
+
+      @include abstracts.screen(sm) {
+        font-size: 1.6rem !important;
+      }
     }
 
     &-input-icon {
@@ -240,6 +244,12 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 32px;
+
+    @include abstracts.screen(sm) {
+      position: sticky;
+      bottom: 30px;
+      background: var(--filter-form-bg);
+    }
   }
 
   &__cancel,
@@ -249,6 +259,7 @@
 
     @include abstracts.screen(sm) {
       flex: 1;
+      height: 42px;
     }
   }
 
@@ -277,6 +288,7 @@
 
     @include abstracts.screen(sm) {
       max-height: calc(100vh - 200px);
+      padding-bottom: 60px;
     }
   }
 }
